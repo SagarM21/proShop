@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
-const orderSchema =
-  ({
+const orderSchema = mongoose.Schema(
+  {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
@@ -14,7 +14,7 @@ const orderSchema =
         image: { type: String, required: true },
         price: { type: Number, required: true },
         product: {
-          type: mongoose.Schema.Types.objectId,
+          type: mongoose.Schema.Types.ObjectId,
           required: true,
           ref: "Product",
         },
@@ -69,8 +69,9 @@ const orderSchema =
     },
   },
   {
-    timestamp: true,
-  })
+    timestamps: true,
+  }
+)
 
 const Order = mongoose.model("Order", orderSchema)
 
