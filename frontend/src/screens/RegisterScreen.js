@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Row, Col, Form, Button } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
@@ -6,8 +6,6 @@ import Message from "../components/Message"
 import Loader from "../components/Loader"
 import FormContainer from "../components/FormContainer"
 import { register } from "../actions/userActions"
-
-import React from "react"
 
 const RegisterScreen = ({ location, history }) => {
   const [email, setEmail] = useState("")
