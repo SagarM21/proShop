@@ -31,6 +31,7 @@ const UserListScreen = ({ history }) => {
       dispatch(deleteUser(id))
     }
   }
+
   return (
     <>
       <h1>Users</h1>
@@ -39,7 +40,7 @@ const UserListScreen = ({ history }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Table striped hover bordered responsive className='table-sm'>
+        <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
               <th>ID</th>
@@ -66,7 +67,7 @@ const UserListScreen = ({ history }) => {
                 </td>
                 <td>
                   <LinkContainer to={`/admin/user/${user._id}/edit`}>
-                    <Button className='btn-sm' variant='light'>
+                    <Button variant='light' className='btn-sm'>
                       <i className='fas fa-edit'></i>
                     </Button>
                   </LinkContainer>
