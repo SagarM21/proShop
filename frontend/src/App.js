@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import Header from "./components/Header"
@@ -26,6 +26,7 @@ const App = () => {
       <main className='py-3'>
         <Container>
           <Route path='/' component={HomeScreen} exact />
+          <Route path='/search/:keyword' component={HomeScreen} />
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
